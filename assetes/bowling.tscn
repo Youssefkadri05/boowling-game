@@ -1,0 +1,125 @@
+[gd_scene load_steps=15 format=3 uid="uid://dfxbo6bak4bvh"]
+
+[ext_resource type="Texture2D" uid="uid://cwt7yae8u84gu" path="res://assetes/allee.jpg" id="1_b0su3"]
+[ext_resource type="Script" path="res://assetes/bowling.gd" id="1_fxif5"]
+[ext_resource type="PackedScene" uid="uid://u5ofiy5mslcu" path="res://node_2d.tscn" id="3_0uefa"]
+[ext_resource type="Script" path="res://assetes/ball.gd" id="3_mqvl7"]
+[ext_resource type="PackedScene" uid="uid://c3ga7lvmcwdem" path="res://bill.tscn" id="3_rrmow"]
+[ext_resource type="PackedScene" uid="uid://c7h5qrqnlmhep" path="res://assetes/fleche.glb" id="5_qxp8r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hat2p"]
+albedo_texture = ExtResource("1_b0su3")
+
+[sub_resource type="BoxMesh" id="BoxMesh_e8sfo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hxrxd"]
+size = Vector3(7.87762, 0.001, 46.0973)
+
+[sub_resource type="SphereMesh" id="SphereMesh_yb7ra"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s4xsg"]
+albedo_color = Color(0.0980392, 0.0235294, 1, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pi55u"]
+
+[sub_resource type="Animation" id="Animation_ednhk"]
+resource_name = "fleche_mouvement"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fleche:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 2,
+"values": [Vector3(1.38364, -2.40532, 1.0004), Vector3(1.38364, 1.27555, 1.0004)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3406h"]
+_data = {
+"fleche_mouvement": SubResource("Animation_ednhk")
+}
+
+[node name="Bowling" type="Node3D"]
+script = ExtResource("1_fxif5")
+
+[node name="allee" type="StaticBody3D" parent="."]
+transform = Transform3D(0.999899, 0.013385, 0.00479966, -0.0133842, 0.999911, -0.000193571, -0.00480182, 0.000129318, 0.999988, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="allee"]
+transform = Transform3D(10.8264, 0, 0, 0, 0.0427843, 0, 0, 0, 46.2394, -0.81, 0, -0.307)
+material_override = SubResource("StandardMaterial3D_hat2p")
+mesh = SubResource("BoxMesh_e8sfo")
+
+[node name="bills" type="Node3D" parent="allee"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="allee"]
+shape = SubResource("BoxShape3D_hxrxd")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.999356, 0.0334389, 0.0130166, 0.0357616, 0.957958, 0.284671, -0.00295029, 0.284953, -0.958537, 0.158026, 4.55836, -2.08928)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.016004, 0.999872, 0, -0.999872, 0.016004, 0, 9.70763, 0)
+
+[node name="ball" type="RigidBody3D" parent="."]
+transform = Transform3D(0.990268, 0, 0.139173, 0, 1, 0, -0.139173, 0, 0.990268, 5.582, 1.5, -11.86)
+mass = 2.05
+script = ExtResource("3_mqvl7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ball"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.35405, -0.663054, 17.0868)
+mesh = SubResource("SphereMesh_yb7ra")
+surface_material_override/0 = SubResource("StandardMaterial3D_s4xsg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ball"]
+transform = Transform3D(1.4985, -0.0670245, 0, 0.0670245, 1.4985, 0, 0, 0, 1.5, -7.33108, -0.677493, 17.0607)
+shape = SubResource("SphereShape3D_pi55u")
+
+[node name="Progress_Bar" parent="." instance=ExtResource("3_0uefa")]
+position = Vector2(776, 336)
+
+[node name="quilles" type="Node3D" parent="."]
+
+[node name="bill1" parent="quilles" instance=ExtResource("3_rrmow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0462873, 0, 21.6377)
+
+[node name="bill2" parent="quilles" instance=ExtResource("3_rrmow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71587, 0, 21.6377)
+
+[node name="bill3" parent="quilles" instance=ExtResource("3_rrmow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.61298, 0, 21.6377)
+
+[node name="bill4" parent="quilles" instance=ExtResource("3_rrmow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.06691, 0, 21.6377)
+
+[node name="bill5" parent="quilles" instance=ExtResource("3_rrmow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37627, 0, 21)
+
+[node name="bill6" parent="quilles" instance=ExtResource("3_rrmow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.890839, 0, 21)
+
+[node name="bill7" parent="quilles" instance=ExtResource("3_rrmow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.808719, 0, 21)
+
+[node name="bill8" parent="quilles" instance=ExtResource("3_rrmow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.56775, 0, 20.5603)
+
+[node name="bill9" parent="quilles" instance=ExtResource("3_rrmow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11531, 0, 20.5603)
+
+[node name="bill10" parent="quilles" instance=ExtResource("3_rrmow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.784011, 0, 19.8082)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "fleche_mouvement"
+libraries = {
+"": SubResource("AnimationLibrary_3406h")
+}
+
+[node name="fleche" parent="." instance=ExtResource("5_qxp8r")]
+transform = Transform3D(-0.0332257, -0.409967, -0.0191283, 0.0996517, 0.0414969, -0.171139, 0.627582, -0.0282938, 0.0261619, -0.441586, 0.190499, 2.21303)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://u5ofiy5mslcu"]
+
+[ext_resource type="Script" path="res://ProgressBar.gd" id="2_q0dx0"]
+
+[sub_resource type="Theme" id="Theme_pkhe1"]
+
+[node name="Prgress_Bar" type="Node2D"]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+show_behind_parent = true
+texture_filter = 2
+offset_left = 205.0
+offset_top = -49.0
+offset_right = 260.0
+offset_bottom = 58.0
+theme = SubResource("Theme_pkhe1")
+fill_mode = 3
+script = ExtResource("2_q0dx0")

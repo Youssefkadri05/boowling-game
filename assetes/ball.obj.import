@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b15l7iqn3lejm"
+path="res://.godot/imported/ball.obj-0b1bdf8e71d4d80efc040e439479dc48.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ball.obj-0b1bdf8e71d4d80efc040e439479dc48.mesh"]
+
+source_file="res://assetes/ball.obj"
+dest_files=["res://.godot/imported/ball.obj-0b1bdf8e71d4d80efc040e439479dc48.mesh", "res://.godot/imported/ball.obj-0b1bdf8e71d4d80efc040e439479dc48.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

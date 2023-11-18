@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://lnghneqire8l"
+path="res://.godot/imported/bowling.obj-080899f7858253f0bc43184a930a5260.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bowling.obj-080899f7858253f0bc43184a930a5260.mesh"]
+
+source_file="res://assetes/bowling.obj"
+dest_files=["res://.godot/imported/bowling.obj-080899f7858253f0bc43184a930a5260.mesh", "res://.godot/imported/bowling.obj-080899f7858253f0bc43184a930a5260.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
