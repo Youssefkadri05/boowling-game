@@ -16,19 +16,19 @@ size = Vector3(13.725, 0.001, 46.0973)
 
 [sub_resource type="Animation" id="Animation_ednhk"]
 resource_name = "fleche_mouvement"
-length = 8.0
+length = 4.0
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("fleche:rotation")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0001, 2, 4.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.9, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 2,
-"values": [Vector3(1.38364, 1.07717, 1.0004), Vector3(1.38364, 1.07717, 1.0004), Vector3(1.38364, -0.547608, 1.0004), Vector3(1.38364, -2.19468, 1.0004)]
+"values": [Vector3(1.38364, -2.40532, 1.0004), Vector3(1.38364, 1.27555, 1.0004), Vector3(1.38364, -2.39697, 1.0004)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3406h"]
@@ -60,7 +60,7 @@ transform = Transform3D(0.818624, -4.29663e-08, -5.58794e-09, 1.92301e-10, 0.997
 shape = SubResource("BoxShape3D_hxrxd")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.999356, 0.033439, 0.0130166, 0.0357616, 0.957958, 0.284671, -0.00295029, 0.284953, -0.958537, -0.990257, 4.55836, 3.94983)
+transform = Transform3D(-0.999356, 0.0334389, 0.0130166, 0.0357616, 0.957958, 0.284671, -0.00295029, 0.284953, -0.958537, 0.158026, 4.55836, -2.08928)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.016004, 0.999872, 0, -0.999872, 0.016004, 0, 9.70763, 0)
@@ -71,34 +71,34 @@ position = Vector2(776, 336)
 [node name="quilles" type="Node3D" parent="."]
 
 [node name="bill1" parent="quilles" instance=ExtResource("3_rrmow")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.491808, 0, 21.6377)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0462873, 0, 21.6377)
 
 [node name="bill2" parent="quilles" instance=ExtResource("3_rrmow")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.664587, 0, 21.6377)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71587, 0, 21.6377)
 
 [node name="bill3" parent="quilles" instance=ExtResource("3_rrmow")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.61298, 0, 21.6377)
 
 [node name="bill4" parent="quilles" instance=ExtResource("3_rrmow")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75017, 0, 21.6377)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.06691, 0, 21.6377)
 
 [node name="bill5" parent="quilles" instance=ExtResource("3_rrmow")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.34744, 0, 21)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37627, 0, 21)
 
 [node name="bill6" parent="quilles" instance=ExtResource("3_rrmow")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0967656, 0, 21)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.890839, 0, 21)
 
 [node name="bill7" parent="quilles" instance=ExtResource("3_rrmow")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20436, 0, 21)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.808719, 0, 21)
 
 [node name="bill8" parent="quilles" instance=ExtResource("3_rrmow")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.56775, 0, 20.5603)
 
 [node name="bill9" parent="quilles" instance=ExtResource("3_rrmow")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.503759, 0, 20.5603)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11531, 0, 20.5603)
 
 [node name="bill10" parent="quilles" instance=ExtResource("3_rrmow")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14453, 0, 19.8082)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.784011, 0, 19.8082)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "fleche_mouvement"
@@ -107,11 +107,11 @@ libraries = {
 }
 
 [node name="fleche" parent="." instance=ExtResource("5_qxp8r")]
-transform = Transform3D(0.628026, 0.00871487, 0.0277773, 0.0996523, 0.041497, -0.171139, -0.0233867, 0.41085, 0.0166963, -0.911348, 0.190499, 7.45473)
+transform = Transform3D(-0.609273, 0.107137, -0.0219633, 0.0996523, 0.041497, -0.171139, -0.15411, -0.396731, -0.0238318, -0.441586, 0.190499, 2.21303)
 
 [node name="ball" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.966935, -1.16964, 9.98198)
-mass = 2.28
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.82095)
+mass = 2.8
 script = ExtResource("3_mqvl7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ball"]
