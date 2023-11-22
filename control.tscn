@@ -10,45 +10,45 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ResultLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 45.0
-offset_right = 64.0
-offset_bottom = 71.0
-scale = Vector2(5.04157, 5)
-
-[node name="GridContainer" type="GridContainer" parent="."]
-layout_mode = 0
-offset_left = 366.0
-offset_top = 218.0
-offset_right = 406.0
-offset_bottom = 258.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="GridContainer/HBoxContainer"]
-layout_mode = 2
-text = "label1"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="GridContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="GridContainer/HBoxContainer2"]
-layout_mode = 2
-text = "label2"
-
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.661
 anchor_bottom = 0.551
-offset_left = -35.0
-offset_top = -10.0
-offset_right = 487.528
-offset_bottom = 1337.95
+offset_left = -21.0
+offset_top = -20.0
+offset_right = 501.528
+offset_bottom = 1327.95
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.548109, 0.243383)
 texture = ExtResource("1_jcjvq")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 165.0
+offset_top = 214.0
+offset_right = 263.0
+offset_bottom = 275.0
+scale = Vector2(1.56, 1.28)
+
+[node name="Player1" type="HBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="label_P1_R1" type="Label" parent="GridContainer/Player1"]
+layout_mode = 2
+text = "label1"
+
+[node name="label_P1_R2" type="Label" parent="GridContainer/Player1"]
+layout_mode = 2
+text = "label1"
+
+[node name="Player2" type="HBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="label_P2_R1" type="Label" parent="GridContainer/Player2"]
+layout_mode = 2
+text = "label2"
+
+[node name="label_P2_R2" type="Label" parent="GridContainer/Player2"]
+layout_mode = 2
+text = "label2"
